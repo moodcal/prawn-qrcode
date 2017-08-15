@@ -95,6 +95,8 @@ module Prawn
       fill_color background_color
 
       bounding_box(pos, width: extent, height: extent) do |_box|
+        fill_color background_color
+        fill_rectangle [0,extent], extent, extent
         fill_color foreground_color
         pos_y = margin * dot + qr_code.modules.length * dot
 
